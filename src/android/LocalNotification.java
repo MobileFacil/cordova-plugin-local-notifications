@@ -523,7 +523,7 @@ public class LocalNotification extends CordovaPlugin {
      * @param event        The event name.
      * @param notification Optional notification to pass with.
      */
-    static void fireEvent (String event, Notification notification) {
+    public static void fireEvent (String event, Notification notification) {
         fireEvent(event, notification, new JSONObject());
     }
 
@@ -633,6 +633,13 @@ public class LocalNotification extends CordovaPlugin {
      */
     private Manager getNotMgr() {
         return Manager.getInstance(cordova.getActivity());
+    }
+
+    /**
+     * Notification manager instance for another plugin.
+     */
+    public static Manager getManager(Context pluginContext) {
+        return Manager.getInstance(pluginContext);
     }
 
 }

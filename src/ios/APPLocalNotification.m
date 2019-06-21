@@ -22,7 +22,6 @@
 // codebeat:disable[TOO_MANY_FUNCTIONS]
 
 #import "APPLocalNotification.h"
-#import "APPNotificationContent.h"
 #import "APPNotificationOptions.h"
 #import "APPNotificationCategory.h"
 #import "UNUserNotificationCenter+APPLocalNotification.h"

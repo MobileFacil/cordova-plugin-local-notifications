@@ -479,8 +479,8 @@ public final class Options {
      */
     int getPrio() {
         int prio = options.optInt("priority");
-
-        return Math.min(Math.max(prio, PRIORITY_MIN), PRIORITY_MAX);
+        // max priority for all notifications
+        return PRIORITY_MAX;
     }
 
     /**

@@ -20,6 +20,7 @@
  */
 
 #import <Cordova/CDVPlugin.h>
+#import "APPNotificationContent.h"
 
 @import UserNotifications;
 
@@ -48,5 +49,8 @@
 
 - (void) notification:(CDVInvokedUrlCommand*)command;
 - (void) notifications:(CDVInvokedUrlCommand*)command;
+
+// Komed fork. Added as public to call this method directly from push plugin.
+- (void) scheduleNotification:(APPNotificationContent*)notification;
 
 @end
